@@ -758,7 +758,7 @@ export const RunwaySection: React.FC<RunwaySectionProps> = ({
 
           {/* Layer 5: Mobile Walk / Progress Line */}
           <div
-            className="md:hidden"
+            className="rw-mobile-walk"
             style={{
               position: "absolute",
               left: "50%",
@@ -785,7 +785,7 @@ export const RunwaySection: React.FC<RunwaySectionProps> = ({
 
         {/* Desktop Runway Controls (01 - 06 Progress Ticks & Autoplay toggle) */}
         <div
-          className="hidden md:flex"
+          className="rw-desktop-controls"
           style={{
             alignItems: "center",
             justifyContent: "space-between",

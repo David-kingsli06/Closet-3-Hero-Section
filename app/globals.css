@@ -752,6 +752,36 @@ a {
   }
 }
 
+.rw-desktop-controls {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .rw-desktop-controls {
+    display: flex;
+  }
+}
+
+.rw-mobile-walk {
+  display: block;
+}
+
+@media (min-width: 750px) {
+  .rw-desktop-controls {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .rw-desktop-controls {
+    display: flex;
+  }
+}
+
+.rw-mobile-walk {
+    display: none !important;
+  }
+}
+
 /* Animations */
 @keyframes rw-ring {
   0% { transform: scale(0.8); opacity: 0.9; }

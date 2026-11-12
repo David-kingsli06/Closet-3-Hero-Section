@@ -10,17 +10,44 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
   onOpenBag,
 }) => {
   return (
-    <header className="site-header">
+    <header
+      className="site-header"
+      style={{
+        height: "88px",
+        padding: "0 40px",
+        display: "flex",
+        alignItems: "center",
+        gap: "32px",
+        borderBottom: "1px solid #e4e4e4",
+        backgroundColor: "#ffffff",
+        position: "relative",
+        zIndex: 50,
+      }}
+    >
       {/* Brand */}
       <a
         href="./"
         aria-label="Runway home"
-        className="brand-link"
+        style={{
+          marginRight: "auto",
+          display: "inline-flex",
+          alignItems: "center",
+          textDecoration: "none",
+        }}
       >
         <img
           src="https://reel-ref-try-the-look.vercel.app/assets/nike-logo.svg"
           alt="Nike"
-          className="brand-logo"
+          width={68}
+          height={24}
+          style={{
+            width: "68px",
+            height: "24px",
+            maxWidth: "68px",
+            maxHeight: "24px",
+            objectFit: "contain",
+            display: "block",
+          }}
         />
       </a>
 
@@ -28,8 +55,15 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
       <nav
         aria-label="Main navigation"
         className="main-nav"
+        style={{
+          display: "flex",
+          gap: "28px",
+          fontSize: "14px",
+          fontWeight: 600,
+          fontFamily: "'Inter', Helvetica, Arial, sans-serif",
+        }}
       >
-        <a href="./" className="nav-link">
+        <a href="./" className="nav-link" style={{ padding: "12px 0", color: "#151413" }}>
           Home
         </a>
         <a
@@ -37,6 +71,7 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
           target="_blank"
           rel="noopener noreferrer"
           className="nav-link desktop-only"
+          style={{ padding: "12px 0", color: "#151413" }}
         >
           Nike Orbit
         </a>
@@ -45,6 +80,7 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
           target="_blank"
           rel="noopener noreferrer"
           className="nav-link desktop-only"
+          style={{ padding: "12px 0", color: "#151413" }}
         >
           Hand Rail Pro
         </a>
@@ -52,6 +88,7 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
           href="./"
           aria-current="page"
           className="nav-link"
+          style={{ padding: "12px 0", color: "#151413", textDecoration: "underline", textUnderlineOffset: "4px" }}
         >
           Runway
         </a>
@@ -62,7 +99,17 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
         type="button"
         aria-label="Open styling bag"
         onClick={onOpenBag}
-        className="bag-btn"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "5px",
+          background: "transparent",
+          border: "none",
+          minWidth: "44px",
+          minHeight: "44px",
+          cursor: "pointer",
+        }}
       >
         <svg
           viewBox="0 0 24 26"
@@ -73,7 +120,15 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
         >
           <path d="M4 8h16l1 16H3L4 8zM8 8V6a4 4 0 0 1 8 0v2" />
         </svg>
-        <span data-cart-count className="cart-count">
+        <span
+          data-cart-count
+          style={{
+            fontSize: "10px",
+            fontVariantNumeric: "tabular-nums",
+            fontWeight: 500,
+            color: "#151413",
+          }}
+        >
           {cartCount}
         </span>
       </button>
